@@ -5,7 +5,7 @@ When I was pursuing a career in IT back in 2022 I realized that the best way to 
 
 For aspiring and professional security analysts that are already in the cybersecurity field, having a home lab is crucial for gaining familiarity with tools, configurations, and simulating attacks.
 
-The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detection Monitoring lab. I also made additional modifications to simulate a hybrid environment in the cloud using Microsoft Azure. This doesn't go over all of the step-by-step details of how to configure the lab. Check out Day's Cyberwoxacademy website. https://cyberwoxacademy.com/building-a-cybersecurity-homelab-for-detection-monitoring/
+The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detection Monitoring lab. I also made additional modifications to simulate a hybrid environment in the cloud using Microsoft Azure. This is me detailing my experience setting up this lab and less so a walkthrough on how to configure the lab. Check out Day's Cyberwoxacademy website for more details on how to complete this setup: https://cyberwoxacademy.com/building-a-cybersecurity-homelab-for-detection-monitoring/
 
 <h2>Hardware Specs for the Host PC:</h2>
 
@@ -95,3 +95,46 @@ The two book resources I personally recommend for this:
 ![2023-07-16_18-37-43](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/af26d541-6eb6-49e5-a08b-a2bcd349caf0)
 
 
+<h2>Part 6: Setting up Windows 10 PC and Adding to AD Domain </h2>
+
+After generating the users, I installed a Windows 10 VM and added it to VMNet3 (Victim Domain).
+
+I navigated to Network Adapter settings, right clicked on Ethernet, selected Properties.
+
+Selected IPv4 and added IP Address <b>192.168.2.1</b> as the default gateway and <b>192.168.2.10 (Victim Network)</b> as the DNS Server.
+
+Search "domain" in the search bar and select Access work or school option.
+
+Selected 'Connect' > 'Join this device to local Active Directory Domain
+
+Enter domain name.local (GAVINPAUL.local for me)
+![2023-07-03_01-07-55](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/d5ffa57b-9fc5-40e5-a70e-995551d06fa5)
+
+![2023-07-03_01-08-20](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/bee07866-5f59-4c8d-82a1-e771fdb71a2e)
+
+
+<h2>Part 7: Installing Splunk on Ubuntu Server </h2>
+
+The next step was setting up my Splunk instance. This was pretty straightforward. I installed Ubuntu Server from Ubuntu.com and followed the steps. To access the GUI, I needed to install tasksel and reboot.
+
+Once I was able to access the GUI and get past the initial setup, I navigated to Firefox to install Splunk from their website.
+
+![2023-07-03_01-31-52](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/8305afe5-0fa5-4c3b-bb57-e13141c8740d)
+
+![2023-07-03_01-52-12](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/0065797d-4d89-4a61-a7bd-ac977a63079b)
+
+![2023-07-03_02-08-25](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/3393b2e2-01a6-48e8-9dca-f54b34a5c096)
+
+![2023-07-03_02-11-39](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/1aa052fb-b9f6-4c3f-a314-a410cc25a1e6)
+
+![2023-07-03_02-14-46](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/21c92a8d-d2ab-4e1d-b858-e9ac41a9447e)
+
+![2023-07-03_02-21-09](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/2651ed82-621a-413b-8fc9-bf8945ec4675)
+
+
+
+<h2>Part 8: Installing Universal Forwarder on Windows Server </h2>
+
+Now that Splunk was installed, the next step was to install the Universal Forwarder to log the activities on my endpoint.
+
+I navigated back to Windows Server VM and installed it 
