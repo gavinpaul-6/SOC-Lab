@@ -16,7 +16,7 @@ The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detec
 - Motherboard: Asus G15DK
 - Host Operating System: Windows 11 Pro
 
-In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I really wanted a powerhouse to build out beefier labs in the future. If you have the funds I highly recommend investing in one. I would link to where I purchased my PC but the link is no longer available as of August 3rd.
+In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I wanted a powerhouse to build out beefier labs in the future. If you have the funds I highly recommend investing in one. I would link to where I purchased my PC but the link is no longer available as of August 3rd.
 
 <h2>Part 1: Configuring pfSense</h2>
 
@@ -79,7 +79,19 @@ I navigated to Firefox web browser and entered 192.168.1.1 and clicked 'Advanced
 <h2>Part 4: Configuring Windows Server 2019 as a Domain Controller</h2>
 
 This portion of the lab is setting up an Active Directory domain with Windows Server 2019 as the Domain Controller and a Windows 10 machine.
-After completing the setup, I renamed the Domain Controller and restarted. After rebooting I installed Active Directory Domain Services from the Server Manager dashboard.
+After completing the setup, I renamed the Domain Controller and restarted. After rebooting I installed Active Directory Domain Services and configured Active Directory Certificate Services on the destination server from the Server Manager dashboard.
 
+
+<h2>Part 5: Creating Users with Powershell</h2>
+
+For this part of the lab, I wanted to replicate a small-medium business Active Directory environment with a bunch of users. This wasn't necessary for this lab, but I wanted to make it as realistic with 1000 users instead of 2 or 3. I utilized a Powershell script from Josh Madakor's AD Lab on YouTube to generate users. I also had invested in two Powershell books last year to help me learn more. 
+
+The two book resources I personally recommend for this:
+- Learn Powershell in a Month of Lunches by Travis Plunk and James Petty
+- Learn Powershell Scripting in a Month of Lunches by Dom Jones and Jeffery Hicks
+
+![2023-07-16_18-29-39](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/dc8252d2-8177-47c4-a68e-ba97cf1e5e17)
+
+![2023-07-16_18-37-43](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/af26d541-6eb6-49e5-a08b-a2bcd349caf0)
 
 
