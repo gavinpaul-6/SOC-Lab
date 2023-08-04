@@ -1,4 +1,4 @@
-# SOC-Lab
+# SOC Lab
 Cybersecurity Detection &amp; Monitoring Lab
 
 When I was pursuing a career in IT back in 2022 I realized that the best way to learn is to lab.
