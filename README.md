@@ -19,8 +19,9 @@ The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detec
 
 In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I wanted a powerhouse to build out beefier labs in the future. If you have the funds I highly recommend investing in one. Unfortunately, the link I used to purchase it from Amazon is no longer available.
 
-<img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/94dc0435-8ff5-4edd-b1b8-d8059460cca1" width="200" height="400" />
-
+<p align="center">
+<img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/94dc0435-8ff5-4edd-b1b8-d8059460cca1" width="400" height="800" />
+</p>
 
 <h2>Part 1: Configuring pfSense</h2>
 
@@ -90,7 +91,7 @@ After completing the setup, I renamed the Domain Controller and restarted. After
 
 For this part of the lab, I wanted to replicate a small-medium business Active Directory environment with a bunch of users. This wasn't necessary for this lab, but I wanted to make it as realistic with 1000 users instead of 2 or 3. I utilized a Powershell script from Josh Madakor's AD Lab on YouTube to generate users. I also had invested in two Powershell books last year to help me learn more. 
 
-The two book resources I personally recommend for this:
+The two book resources I recommend for this:
 - Learn Powershell in a Month of Lunches by Travis Plunk and James Petty
 - Learn Powershell Scripting in a Month of Lunches by Dom Jones and Jeffery Hicks
 
@@ -127,11 +128,22 @@ Once I was able to access the GUI and get past the initial setup, I navigated to
 
 ![2023-07-03_01-52-12](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/0065797d-4d89-4a61-a7bd-ac977a63079b)
 
+
+
 ![2023-07-03_02-08-25](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/3393b2e2-01a6-48e8-9dca-f54b34a5c096)
+
+After installing Splunk to my Downloads folder, I unzipped it using the tar command using the following:
+
+tar -xvzf splunk
+
+I navigated to splunk > bin and accepted the terms and created admin credentials to log into Splunk.
 
 ![2023-07-03_02-11-39](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/1aa052fb-b9f6-4c3f-a314-a410cc25a1e6)
 
+Once Splunk is up in running, I navigated to web server URL using Firefox and logged into Splunk.
+
 ![2023-07-03_02-14-46](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/21c92a8d-d2ab-4e1d-b858-e9ac41a9447e)
+
 
 ![2023-07-03_02-21-09](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/2651ed82-621a-413b-8fc9-bf8945ec4675)
 
@@ -139,6 +151,21 @@ Once I was able to access the GUI and get past the initial setup, I navigated to
 
 <h2>Part 8: Installing Universal Forwarder on Windows Server </h2>
 
-Now that Splunk was installed, the next step was to install the Universal Forwarder to log the activities on my endpoint.
+Now that Splunk was installed, the next step was to install the Universal Forwarder to log the activities from my Domain Controller to the Splunk SIEM.
 
-I navigated back to Windows Server VM and installed it 
+I navigated back to Windows Server VM and installed Google Chrome before downloading the Splunk Universal Forwarder. 
+
+![2023-07-03_02-37-34](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/184e0109-1312-44ca-a176-4c4d2a48fa3d)
+
+![2023-07-03_02-40-16](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/d72335b3-fe9d-4ad9-98f3-d90815b8256b)
+
+- Once downloaded, I logged back into my Splunk machine and logged into Splunk and navigated to Settings > Forward and Receiving > Configure receiving. 
+
+- Clicked the top right green 'New Receiving Port' button.
+
+- Enter 9997 and then click save so Splunk will listen for inbound connections from the Universal Forwarder on port 9997.
+
+The next step was to create an index for the Windows Event Logs. A Splunk index is a repository for Splunk data. Data that has not been previously added to Splunk is referred to as raw data. When the data is added to Splunk, it indexes the data (uses the data to update its indexes), creating event data. Individual units of this data are called events.
+
+![2023-07-03_02-21-09](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/2651ed82-621a-413b-8fc9-bf8945ec4675)
+
