@@ -20,7 +20,7 @@ The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detec
 In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I wanted a powerhouse to build out beefier labs in the future. If you have the funds I highly recommend investing in one. Unfortunately, the link I used to purchase it from Amazon is no longer available.
 
 <p align="center">
-<img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/94dc0435-8ff5-4edd-b1b8-d8059460cca1" width="400" height="800" />
+<img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/94dc0435-8ff5-4edd-b1b8-d8059460cca1" width="400" height="800" /><img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/49eaf21d-2c84-4fdd-b54a-33d4185f509d" width="400" height="800" />
 </p>
 
 <h2>Part 1: Configuring pfSense</h2>
