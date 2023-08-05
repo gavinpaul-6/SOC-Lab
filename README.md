@@ -16,7 +16,11 @@ The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detec
 - Motherboard: Asus G15DK
 - Host Operating System: Windows 11 Pro
 
-In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I wanted a powerhouse to build out beefier labs in the future. If you have the funds I highly recommend investing in one. I would link to where I purchased my PC but the link is no longer available as of August 3rd.
+
+In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I wanted a powerhouse to build out beefier labs in the future. If you have the funds I highly recommend investing in one. Unfortunately, the link I used to purchase it from Amazon is no longer available.
+
+<img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/94dc0435-8ff5-4edd-b1b8-d8059460cca1" width="200" height="400" />
+
 
 <h2>Part 1: Configuring pfSense</h2>
 
