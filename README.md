@@ -1,11 +1,16 @@
 # Setting up my Cybersecurity Detection &amp; Monitoring Lab
 
 
-When I was pursuing a career in IT back in 2022 I realized that the best way to learn is to lab.
+When I decided to pursue a career in Information Technology and Cybersecurity, I learned very quickly that the best way to gain experience is create projects and homelabs.
 
-For aspiring and professional security analysts that are already in the cybersecurity field, having a home lab is crucial for gaining familiarity with tools, configurations, and simulating attacks.
+For aspiring cybersecurity looking to enter the field and professional security analysts who are already in the cybersecurity field, having a home lab is crucial for gaining familiarity with tools, configurations, and simulating attacks.
 
-The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detection Monitoring lab. I also made additional modifications to simulate a hybrid environment in the cloud using Microsoft Azure. This is me detailing my experience setting up this lab and less so a walkthrough on how to configure the lab. Check out Day's Cyberwoxacademy website for more details on how to complete this setup: https://cyberwoxacademy.com/building-a-cybersecurity-homelab-for-detection-monitoring/
+It's also a very common interview question that comes up and it could be the difference between you and the other person who doesn't have one.
+
+
+
+The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detection Monitoring lab. I also made additional modifications to simulate a hybrid environment in the cloud using Microsoft Azure.
+This is me detailing my experience setting up this lab and less so a walkthrough on how to configure the lab. Check out Day's Cyberwoxacademy website for more details on how to complete this setup: https://cyberwoxacademy.com/building-a-cybersecurity-homelab-for-detection-monitoring/
 
 <h2>Hardware Specs for the Host PC:</h2>
 
@@ -17,7 +22,8 @@ The home lab I configured was inspired by Day Cyberwox's Cybersecurity and Detec
 - Host Operating System: Windows 11 Pro
 
 
-In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I wanted a powerhouse to build out beefier labs in the future. If you have the funds I highly recommend investing in one. Unfortunately, the link I used to purchase it from Amazon is no longer available.
+In late June, I decided to invest in a gaming PC that I could (obviously) play games with but also to build out the labs for my cybersecurity career. I could have used my laptop which had 16GB of RAM, but I wanted a powerhouse to build out beefier labs in the future. 
+If you have it in your budget I highly recommend investing in one. I would like to share the Amazon link I used to purchase but unfortunately, it is no longer available.
 
 <p align="center">
 <img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/94dc0435-8ff5-4edd-b1b8-d8059460cca1" width="400" height="800" /><img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/49eaf21d-2c84-4fdd-b54a-33d4185f509d" width="400" height="800" />
@@ -25,15 +31,15 @@ In late June, I decided to invest in a gaming PC that I could (obviously) play g
 
 <h2>Part 1: Configuring pfSense</h2>
 
-I chose VMWare Workstation Pro as my hypervisor of choice. VirtualBox is another option.
+I chose VMWare Workstation Pro as my hypervisor of choice. VirtualBox is another option, but I like the additional features of VMWare personally.
 
-Next, was to install and configure <b>pfSense</b> as the firewall to segment the network and route traffic which will only be accessible from the Kali Linux machine.
+First step of the process was installing and configuring <b>pfSense</b> as the firewall to segment the network and route traffic which will only be accessible from the Kali Linux machine.
 
 I configured pfSense as shown in the screenshot:
 
 ![2023-07-02_14-05-40](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/8ed26011-2362-415c-ba4d-470d97409ea2)
 
-I added 5 network adapters and correspond them with VMnet interfaces.
+I added 5 network adapters and corresponded them with VMnet interfaces.
 
 - NAT - This is the connection for the virtual environment to the host PC and Internet.
 - VMNet2 - This is the connection to the Kali VM which will be the attack machine and management interface for pfSense.
