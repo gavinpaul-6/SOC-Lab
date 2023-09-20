@@ -30,7 +30,13 @@ I chose to make an investment in a gaming PC, not only for enjoying games, but a
 
 <p align="center">
 <img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/94dc0435-8ff5-4edd-b1b8-d8059460cca1" width="400" height="800" /><img src="https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/49eaf21d-2c84-4fdd-b54a-33d4185f509d" width="400" height="800" />
+
 </p>
+
+
+![Cyber Lab](https://github.com/gavinpaul-6/SOC-Lab/assets/98987388/737c66fd-8314-4f89-9485-eafb5687b1e2)
+
+
 
 <h2>Part 1: Configuring pfSense</h2>
 
