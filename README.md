@@ -8,9 +8,8 @@ For aspiring cybersecurity looking to enter the field and professional security 
 It's also a very common interview question that comes up and it could be the difference between you and the other person who doesn't have one.
 
 
-The homelab I configured was inspired by Day Cyberwox's Cybersecurity and Detection Monitoring lab. I made additional modifications to simulate a hybrid environment in the cloud using Microsoft Azure.
+The setup of my home lab was influenced by Cyberwox Academy's [Cybersecurity and Detection Monitoring lab](https://cyberwoxacademy.com/building-a-cybersecurity-homelab-for-detection-monitoring/) by Day Johnson, with additional adjustments made to replicate a hybrid cloud environment by incorporating Microsoft Azure services.
 
-Check out Day's Cyberwoxacademy website for more details on how to complete this setup: https://cyberwoxacademy.com/building-a-cybersecurity-homelab-for-detection-monitoring/
 
 <h2>Hardware Specs for the Host PC:</h2>
 
